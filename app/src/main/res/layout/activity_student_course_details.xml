@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E94B4B"
-    tools:context=".StudentCourseDetails">
+    android:background="@color/background"
+    tools:context=".StudentCourseAttendanceDetails">
 
     <EditText
         android:id="@+id/courseName2"
@@ -35,7 +35,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="175dp"
@@ -55,17 +55,17 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
             <TextView
-                android:text="Date"
                 android:layout_column="1"
-                android:textSize="24sp"
-                />
+                android:text="Date"
+                android:textSize="24sp" />
+
             <TextView
-                android:textSize="24sp"
-                android:text="Status"
                 android:layout_column="2"
-                />
+                android:text="Status"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow

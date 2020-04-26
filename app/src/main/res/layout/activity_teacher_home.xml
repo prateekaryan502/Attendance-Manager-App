@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".TeacherHome">
+
+    <EditText
+        android:id="@+id/teacherName"
+        android:layout_width="174dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Welcom Uma"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="181dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:text="Your Schedule Today"
+        android:textColor="@color/Heading"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/dateToday"
+        app:layout_constraintTop_toBottomOf="@+id/teacherName" />
+
+    <EditText
+        android:id="@+id/dateToday"
+        android:layout_width="118dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:ems="10"
+        android:hint="Today's Date"
+        android:inputType="date"
+        android:textColor="@color/Heading"
+        android:textColorHint="@color/Heading"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teacherName"
+        app:layout_constraintEnd_toStartOf="@+id/teacherName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/teacherSchedule"
+        android:layout_width="350dp"
+        android:layout_height="611dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.937">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_column="1"
+                android:text="class"
+                android:textColor="@color/Heading"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="112dp"
+                android:layout_column="2"
+                android:text="Course"
+                android:textColor="@color/Heading"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_column="3"
+                android:text="Take Attendance"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <EditText
+                android:text="CB"
+                android:textSize="18sp"
+                android:layout_column="1"
+                />
+
+            <EditText
+                android:layout_width="68dp"
+                android:layout_column="2"
+                android:text="Computer Science"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/takeAttendance"
+                android:text="Take Attendance"
+                android:layout_column="3"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

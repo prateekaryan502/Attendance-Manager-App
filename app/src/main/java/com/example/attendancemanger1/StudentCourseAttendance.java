@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class StudentCourse extends AppCompatActivity {
+public class StudentCourseAttendance extends AppCompatActivity {
     EditText coursename, totalclasses, attendedclasses, percentage;
     Button details;
     @Override
@@ -32,10 +32,10 @@ public class StudentCourse extends AppCompatActivity {
         details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent todetails = new Intent(getApplicationContext(),StudentCourseDetails.class);
+                Intent tostudentattendancedetails = new Intent(getApplicationContext(), StudentCourseAttendanceDetails.class);
 
                 // here we will have to implement puExtra and add extra varibles needed to access database of the student.
-                startActivity(todetails);
+                startActivity(tostudentattendancedetails);
             }
         });
 

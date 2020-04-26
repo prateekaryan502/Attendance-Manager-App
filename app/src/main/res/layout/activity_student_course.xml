@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E94B4B"
+    android:background="@color/background"
     tools:context=".StudentHome">
 
     <EditText
@@ -66,10 +66,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Course Name"
-        android:textSize="30sp"
-        android:textColor="#FFFFFF"
         android:fontFamily="sans-serif-medium"
+        android:text="Course Name"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="@+id/guideline"

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TableLayout;
 
-public class StudentCourseDetails extends AppCompatActivity {
+public class StudentCourseAttendanceDetails extends AppCompatActivity {
 
     EditText coursename;
     TableLayout coursedate;

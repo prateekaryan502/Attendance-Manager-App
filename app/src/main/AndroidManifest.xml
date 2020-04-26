@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StudentCourseDetails"></activity>
-        <activity android:name=".StudentCourse" />
+        <activity android:name=".TakeAttendance"></activity>
+        <activity android:name=".TeacherHome" />
+        <activity android:name=".StudentCourseAttendanceDetails" />
+        <activity android:name=".StudentCourseAttendance" />
         <activity android:name=".StudentHome" />
         <activity android:name=".Login" />
         <activity android:name=".Register">

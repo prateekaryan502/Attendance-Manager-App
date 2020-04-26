@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Intent intent;
-                            intent = new Intent(getApplicationContext(),StudentHome.class);
+                            intent = new Intent(getApplicationContext(),TeacherHome.class);
                             Toast.makeText(Login.this,"Logged in successfully",Toast.LENGTH_SHORT).show();
                             String message=emaild;
                             intent.putExtra(MSG, message);
