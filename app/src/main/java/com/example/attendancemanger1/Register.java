@@ -31,13 +31,13 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        fullname=findViewById(R.id.email);
+        fullname=findViewById(R.id.fullname);
         phone=findViewById(R.id.phone);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
         progressBar=findViewById(R.id.progressBar);
         firebaseAuth=FirebaseAuth.getInstance();
-        register=(Button)findViewById(R.id.register);
+        register=findViewById(R.id.register);
         gotologin=findViewById(R.id.gotologin);
 
         gotologin.setOnClickListener(new View.OnClickListener() {

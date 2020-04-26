@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity {
     public static final String MSG = "com.AttendanceManager1.welcome";
     EditText password,email;
     Button login;
+    Button register;
 
     FirebaseAuth firebaseAuth;
 
@@ -36,6 +37,14 @@ public class Login extends AppCompatActivity {
        // FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         login=findViewById(R.id.login);
+        register=findViewById(R.id.register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toregister =new Intent(getApplicationContext(),Register.class);
+                startActivity(toregister);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +73,8 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                            Intent intent;
+                            intent = new Intent(getApplicationContext(),StudentHome.class);
                             Toast.makeText(Login.this,"Logged in successfully",Toast.LENGTH_SHORT).show();
                             String message=emaild;
                             intent.putExtra(MSG, message);
@@ -72,6 +82,7 @@ public class Login extends AppCompatActivity {
                         }
                         else
                         {
+
                             Toast.makeText(Login.this,"Error :"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                         }
                     }
