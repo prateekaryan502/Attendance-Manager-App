@@ -78,6 +78,7 @@ public class Login extends AppCompatActivity {
                             String message=emaild;
                             intent.putExtra(MSG, message);
                             startActivity(intent);
+                            finish();
                         }
                         else
                         {

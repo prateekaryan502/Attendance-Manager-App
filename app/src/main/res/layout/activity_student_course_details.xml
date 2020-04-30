@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StudentCourseAttendanceDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_student"
+        android:layout_gravity="start"
+        android:background="@color/NavigationBackground"
+        />
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".StudentCourseAttendanceDetails">
+    >
 
     <EditText
         android:id="@+id/courseName2"
@@ -13,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Course Name"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,13 +33,14 @@
 
     <TableLayout
         android:id="@+id/courseDate"
-        android:layout_width="356dp"
-        android:layout_height="695dp"
+        android:layout_width="313dp"
+        android:layout_height="512dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/courseName2">
@@ -41,13 +54,13 @@
                 android:layout_width="175dp"
                 android:layout_column="1"
                 android:text="Date"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="89dp"
                 android:layout_column="2"
                 android:text="Status"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
 
         </TableRow>
@@ -60,12 +73,12 @@
             <TextView
                 android:layout_column="1"
                 android:text="Date"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_column="2"
                 android:text="Status"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -78,3 +91,4 @@
 
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

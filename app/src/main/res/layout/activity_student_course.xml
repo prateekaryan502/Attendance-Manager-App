@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StudentCourseAttendance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_student"
+        android:layout_gravity="start"
+        android:background="@color/NavigationBackground"
+        />
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".StudentHome">
+    >
 
     <EditText
         android:id="@+id/welcomeText"
@@ -14,8 +26,8 @@
         android:drawableRight="@drawable/abc_vector_test"
         android:fontFamily="sans-serif-medium"
         android:text="Prateek"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/profileImage"
         app:layout_constraintEnd_toStartOf="@+id/profileImage"
         app:layout_constraintHorizontal_bias="0.251"
@@ -54,8 +66,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Course Details :"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -68,8 +80,8 @@
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="Course Name"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -80,9 +92,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total classes held"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/primary_text"
         android:textColorHint="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/totalClasses"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
@@ -96,7 +108,9 @@
         android:ems="10"
         android:hint="Total Classes"
         android:inputType="textPersonName"
-        android:textColorHint="#FFFFFF"
+        android:textColor="@color/secondary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/courseName" />
 
@@ -105,8 +119,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Classes Attended"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/attendedClasses"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
@@ -120,7 +134,8 @@
         android:ems="10"
         android:hint="Attended Classes"
         android:inputType="textPersonName"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/totalClasses" />
 
@@ -129,8 +144,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Percentage"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/percentage"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
@@ -144,31 +159,35 @@
         android:ems="10"
         android:hint="Percentage"
         android:inputType="textPersonName"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/attendedClasses" />
 
     <Button
         android:id="@+id/details"
-        android:layout_width="122dp"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:text="Details"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentage" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Click here to see details"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

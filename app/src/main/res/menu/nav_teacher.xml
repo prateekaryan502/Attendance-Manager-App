@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mtakeAttendance"
+        android:title="Take Attendance"/>
+    <item android:title="View Schedule"
+        android:id="@+id/mviewSchedule"/>
+    <item android:id="@+id/mreport"
+        android:title="Reports"/>
+
+</menu>
